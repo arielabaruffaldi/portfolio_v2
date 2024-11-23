@@ -1,0 +1,9 @@
+.projects {
+    min-height: 100vh;
+    padding: 0 var(--horizontal-padding);
+    &__title{
+        text-transform: uppercase;
+        letter-spacing: .3rem;
+;
+    }
+}

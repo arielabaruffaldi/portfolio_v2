@@ -1,0 +1,27 @@
+.main {
+    padding: var(--horizontal-padding);
+    min-height: 80vh;
+    padding-top: 20vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &__container{
+        max-width: 1400px;
+    }
+    
+    &__title{
+        font-size: calc(var(--font-xxl) * 3);
+    }
+
+    &__subtitle{
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-10);
+        margin-top: var(--spacing-10);
+        &__text{
+            width: 35%;
+        }
+    }
+}

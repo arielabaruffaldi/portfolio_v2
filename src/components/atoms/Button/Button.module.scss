@@ -1,0 +1,42 @@
+.button {
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.primary {
+  font-family: var(--font-primary);
+}
+.secondary {
+  font-family: var(--font-secondary);
+}
+
+.text {
+  border: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.outlined {
+  border: 2px solid var(--color-gray-700);
+  padding: var(--spacing-1);
+  border-radius: var(--button-radius);
+}
+
+.contained {
+  color: #000;
+}
+
+.sm {
+  padding: var(--spacing-1) var(--spacing-2);
+}
+.md {
+  padding: var(--spacing-1) var(--spacing-3);
+}
+.lg {
+  padding: var(--spacing-2) var(--spacing-4);
+}

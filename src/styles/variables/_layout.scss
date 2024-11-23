@@ -1,0 +1,128 @@
+$base-size-x025: 0.5rem * 0.25;
+$base-size: 0.5rem;
+$base-size-x075: $base-size * 0.75;
+$base-size-x1-5: $base-size * 1.5;
+$base-size-x2: $base-size * 2;
+$base-size-x2-5: $base-size * 2.5;
+$base-size-x3: $base-size * 3;
+
+$space-base-sm: $base-size * 0.5;
+$space-base: $base-size;
+$space-base-x2: $space-base * 2;
+$space-base-x3: $space-base * 3;
+$space-base-x4: $space-base * 4;
+
+$grid-size: 12;
+$grid-space: 24px;
+$grid-column: calc((#{var(--app-width)} - (#{$grid-space} * (#{$grid-size} - 1))) / #{$grid-size});
+
+$mobile-grid-size: 12;
+$mobile-grid-space: 12px;
+$mobile-grid-column: calc((#{var(--app-width)} - (#{$mobile-grid-space} * (#{$mobile-grid-size} - 1))) / #{$mobile-grid-size});
+
+$width: calc(#{$grid-column} * (#{$grid-size} - 4) + #{$grid-space} * (#{$grid-size} - 3));
+$mobile-width: calc(#{$mobile-grid-column} * (#{$mobile-grid-size} - 2) + #{$mobile-grid-space} * (#{$mobile-grid-size} - 3));
+
+$border-base: solid $base-size * 0.125;
+
+$border-radius-sm: $base-size;
+$border-radius-base: $base-size-x2;
+
+$sidebar-width: calc(($base-size * 10) + 2px); // 90px
+$sidebar-open-width: 270px;
+
+@function spacing($multiplier: 1, $correction: 0px) {
+  @return $space-base * $multiplier + $correction;
+}
+
+@function px-to-em($pixelsize) {
+  @return $pixelsize/16 * 1em;
+}
+
+@function px-to-relative-em($pixelsize, $reletivesize) {
+  @return $reletivesize / $pixelsize * 1em;
+}
+
+$breakpoint-tablet: 769px;
+$breakpoint-desktop: 1025px;
+$breakpointeen-desktop-regular: 1367px;
+$breakpointeen-desktop-wide: 2049px;
+
+@mixin media-query($screensize) {
+  $screensize-desktop-wide: '(min-width: #{$breakpointeen-desktop-wide})';
+  $screensize-desktop-regular: '(min-width: #{$breakpointeen-desktop-regular}) and (max-width: #{$breakpointeen-desktop-wide - 1px})';
+  $screensize-desktop-narrow-max: '(max-width: #{$breakpointeen-desktop-regular - 1px})';
+  $screensize-desktop-narrow: '(min-width: #{$breakpoint-desktop}) and (max-width: #{$breakpointeen-desktop-regular - 1px})';
+  $screensize-desktop: '(min-width: #{$breakpoint-desktop})';
+  $screensize-tablet-max: '(max-width: #{$breakpoint-desktop - 1px})';
+  $screensize-tablet: '(min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px})';
+  $screensize-tablet-min: '(min-width: #{$breakpoint-tablet})';
+  $screensize-mobile: '(max-width: #{$breakpoint-tablet - 1px})';
+  $screensize-mobile-landscape: '(max-width: #{$breakpoint-tablet - 1px}) and (orientation: landscape)';
+
+  @if ($screensize == desktop-wide) {
+    @media #{$screensize-desktop-wide} {
+      @content;
+    }
+  } @else if ($screensize == desktop-regular) {
+    @media #{$screensize-desktop-regular} {
+      @content;
+    }
+  } @else if ($screensize == desktop-narrow-max) {
+    @media #{$screensize-desktop-narrow-max} {
+      @content;
+    }
+  } @else if ($screensize == desktop-narrow) {
+    @media #{$screensize-desktop-narrow} {
+      @content;
+    }
+  } @else if ($screensize == desktop) {
+    @media #{$screensize-desktop} {
+      @content;
+    }
+  } @else if ($screensize == tablet-max) {
+    @media #{$screensize-tablet-max} {
+      @content;
+    }
+  } @else if ($screensize == tablet) {
+    @media #{ $screensize-tablet} {
+      @content;
+    }
+  } @else if ($screensize == tablet-min) {
+    @media #{$screensize-tablet-min} {
+      @content;
+    }
+  } @else if ($screensize == mobile) {
+    @media #{$screensize-mobile} {
+      @content;
+    }
+  } @else if ($screensize == mobile-landscape) {
+    @media #{$screensize-mobile-landscape} {
+      @content;
+    }
+  } @else {
+    @media (max-width: #{$screensize}) {
+      @content;
+    }
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+@mixin hover-or-query($screensize) {
+  &:hover {
+    @content;
+  }
+
+  @include media-query($screensize) {
+    @content;
+  }
+}

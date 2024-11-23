@@ -1,0 +1,29 @@
+.nav {
+  padding: var(--spacing-2) var(--horizontal-padding);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: var(--color-black);
+  z-index: 99;
+  &__title {
+    color: var(--color-white);
+    font-size: var(--font-s);
+    font-weight: var(--font-light);
+    span {
+      display: block;
+    }
+  }
+  &__menu {
+    flex: 1;
+    > ul {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-12);
+    }
+    a {
+      color: var(--color-gray);
+      text-decoration: none;
+    }
+  }
+}

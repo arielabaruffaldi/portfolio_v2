@@ -1,0 +1,133 @@
+$color-full-black: var(--color-full-black);
+$color-black: var(--color-black);
+$color-white: var(--color-white);
+
+$color-black-transparent: var(--color-black-transparent);
+$color-white-transparent: var(--color-white-transparent);
+
+$color-blue-principal-light: var(--color-blue-principal-light);
+$color-blue-principal-default: var(--color-blue-principal-default);
+$color-blue-principal-dark: var(--color-blue-principal-dark);
+
+$color-light-blue-principal: var(--color-light-blue-principal);
+$color-light-blue-principal-light: var(--color-light-blue-principal-light);
+
+$color-gray-extra-light: var(--color-gray-extra-light);
+$color-gray-light: var(--color-gray-light);
+$color-gray: var(--color-gray);
+$color-gray-medium-light: var(--color-gray-medium-light);
+$color-gray-medium: var(--color-gray-medium);
+$color-gray-medium-dark: var(--color-gray-medium-dark);
+$color-gray-dark: var(--color-gray-dark);
+$color-gray-dark-exra: var(--color-gray-dark-exra);
+
+$color-error: var(--color-error);
+$color-error-secondary: var(--color-error-secondary);
+
+$primary-background-color: $color-white;
+$secondary-background-color: $color-black;
+
+$primary-text-color: $color-black;
+$secondary-text-color: $color-white;
+
+// START BUTTON SECTION
+/* LIGHT BLUE */
+$button-light-blue-background-color-default: $color-light-blue-principal;
+$button-light-blue-background-color-hover: $color-light-blue-principal-light;
+$button-light-blue-background-color-active: $color-light-blue-principal-light;
+$button-light-blue-background-color-disabled: $color-gray-light;
+
+$button-light-blue-color-default: $color-blue-principal-default;
+$button-light-blue-color-hover: $color-blue-principal-default;
+$button-light-blue-color-active: $color-white;
+$button-light-blue-color-disabled: $color-gray-light;
+
+/* DARK */
+$button-dark-background-color-default: $color-blue-principal-default;
+$button-dark-background-color-hover: $color-blue-principal-dark;
+$button-dark-background-color-active: $color-blue-principal-light;
+$button-dark-background-color-disabled: $color-gray-medium;
+
+$button-dark-color-default: $color-white;
+$button-dark-color-hover: $color-white;
+$button-dark-color-active: $color-white;
+$button-dark-color-disabled: $color-gray-light;
+
+/* LIGHT */
+$button-light-background-color-default: $color-white;
+$button-light-background-color-hover: $color-gray-light;
+$button-light-background-color-active: $color-blue-principal-light;
+$button-light-background-color-disabled: $color-gray-dark;
+
+$button-light-color-default: $color-blue-principal-default;
+$button-light-color-hover: $color-blue-principal-default;
+$button-light-color-active: $color-white;
+$button-light-color-disabled: $color-gray-light;
+
+$button-sidebar-logout: $color-gray-medium-dark;
+// END BUTTON SECTION
+
+// START SEARCH INPUT SECTION
+$search-input-color-default: $color-blue-principal-default;
+$search-input-color-placeholder: $color-gray-medium;
+$search-input-background-color: $color-gray-light;
+$search-input-border-color: $color-gray-medium;
+$search-input-search-item-background-hover: $color-gray-medium;
+// END SEARCH INPUT SECTION
+
+// START TEXT SECTION
+$color-text-light-blue-principal: $color-light-blue-principal;
+$color-text-dark-blue-principal: $color-blue-principal-light;
+
+$color-text-grey-medium: $color-gray-medium;
+$color-text-grey-dark: $color-gray-dark;
+
+$color-text-full-black: $color-full-black;
+$color-text-black: $color-black;
+$color-text-white: $color-white;
+
+$color-text-error: $color-error;
+$color-text-error-secondary: $color-error-secondary;
+
+/* TEXT VARIANTS */
+$default-text-color: $color-text-black;
+$primary-text-color: $color-text-black;
+$secondary-text-color: $color-text-grey-dark;
+// END TEXT SECTION
+
+// START ACTIVITY INDICATOR SECTION
+$activityindicator-color-primary: $color-blue-principal-default;
+$activityindicator-color-secondary: $color-white;
+// END ACTIVITY INDICATOR SECTION
+
+// START TOOLTIP SECTION
+$tooltip-color-success: var(--rt-color-success);
+// END TOOLTIP SECTION
+
+// START SIDEBAR SECTION
+$sidebar-background-color: $color-gray-light;
+$sidebar-border-color: $color-gray;
+// END SIDEBAR SECTION
+
+// LINKS SECTION
+$return-link-color: var(--color-blue-link);
+// END LINKS SECTION
+
+// START CARD SECTION
+$card-background-color: $color-gray-light;
+$card-background-color-hover: $color-gray-medium;
+// END CARD SECTION
+
+// START CHART SECTION
+$color-chart-red: var(--color-chart-red);
+$color-chart-amber: var(--color-chart-amber);
+$color-chart-yellow: var(--color-chart-yellow);
+$color-chart-green: var(--color-chart-green);
+$color-chart-black: var(--color-chart-black);
+// END CHART SECTION
+
+// START TABLE SECTION
+$table-border-color: $color-gray-medium;
+$table-background-color-even: $color-white;
+$table-background-color-odd: $color-gray-extra-light;
+// ENS TABLE COLOR

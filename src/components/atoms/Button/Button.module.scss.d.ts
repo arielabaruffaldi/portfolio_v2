@@ -1,0 +1,9 @@
+export declare const button: string;
+export declare const contained: string;
+export declare const lg: string;
+export declare const md: string;
+export declare const outlined: string;
+export declare const primary: string;
+export declare const secondary: string;
+export declare const sm: string;
+export declare const text: string;
