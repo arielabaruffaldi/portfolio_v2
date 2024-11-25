@@ -26,7 +26,7 @@ export const PortfolioCarrousel = () => {
         spaceBetween={30}
         slidesPerView={2}
         onSlideChange={(swiper) => setItemId(swiper.activeIndex)}
-        mousewheel={{ forceToAxis: true, sensitivity: 0.5 }}
+        mousewheel={{ forceToAxis: true, sensitivity: 1 }}
         centeredSlides={true}
         pagination={{ clickable: true }}
         navigation={true}
@@ -41,7 +41,7 @@ export const PortfolioCarrousel = () => {
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
             <Link
-              to={`proyectos/${project.pathUrl}`}
+              to={`projects/${project.pathUrl}`}
               onMouseEnter={(e) => onMouseEnter(e)}
             >
               <div className={styles.swiperContainer}>

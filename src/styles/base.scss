@@ -18,7 +18,7 @@
   //COLORS
   --color-full-black: #000000;
   --color-black: #121212;
-  --color-white: #ffffff;
+  --color-white: #f7f7f7;
 
   --color-gray-100: #979797;
   --color-gray-700: #292929;
@@ -60,7 +60,8 @@
 
   //
   --border-radius: 8px;
-  --button-radius: 16px;
+  --border-radius-md: 18px;
+  --border-radius-lg: 28px;
 }
 
 table {
