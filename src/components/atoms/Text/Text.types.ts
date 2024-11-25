@@ -22,4 +22,6 @@ export interface TextProps extends React.JSX.IntrinsicAttributes, PropsWithChild
   lineHeight?: number;
   style?: React.CSSProperties;
   display?: "block" | "inline" | "inline-block";
+  textTransform?: "uppercase" | "lowercase" | "capitalize";
+  letterSpacing?: string;
 }

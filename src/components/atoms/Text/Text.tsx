@@ -18,6 +18,8 @@ export const Text: FunctionComponent<TextProps> = ({
   lineHeight = 1.5,
   style,
   display,
+  textTransform,
+  letterSpacing,
   ...props
 }) => {
   const dynamicClasses = classNames(className, {
@@ -37,6 +39,8 @@ export const Text: FunctionComponent<TextProps> = ({
       style={{
         lineHeight,
         display,
+        textTransform,
+        letterSpacing,
         ...style,
       }}
       {...props}
