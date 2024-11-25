@@ -1,0 +1,24 @@
+.skill {
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-4);
+  max-width: 45vw;
+
+  &__detail {
+    flex-wrap: wrap;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+}
+
+.skill:hover {
+  background-color: var(--color-white);
+  transition: all 0.3s;
+  h3 {
+    color: var(--color-black);
+  }
+  .skill__detail {
+    &__text {
+      color: var(--color-black);
+    }
+  }
+}
