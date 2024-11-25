@@ -3,6 +3,9 @@ import { Text } from "@/components/atoms/Text/Text";
 import styles from "./Main.module.scss";
 import { ReactTyped } from "react-typed";
 import { SocialMedias } from "@/components/organisms/SocialMedias/SocialMedias";
+import { Footer } from "@/components/templates/Footer/Footer";
+import { Projects } from "../Projects/Projects";
+import { About } from "../About/About";
 
 export const Main = () => {
   const currentDate = new Date();
@@ -47,8 +50,10 @@ export const Main = () => {
             based in Buenos Aires.
           </Text>
         </div>
+        <SocialMedias />
       </div>
-      <SocialMedias />
+      <Projects />
+      <About />
     </main>
   );
 };
